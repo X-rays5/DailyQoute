@@ -39,14 +39,14 @@ void console::Send(string text, int color) {
 
 std::string console::In() {
 	std::string input;
-	std::cin >> input;
+	std::getline(std::cin,input);
 	return input;
 }
 
 std::string console::In(string text) {
 	std::string input;
 	std::cout << text;
-	std::cin >> input;
+	std::getline(std::cin,input);
 	return input;
 }
 
@@ -54,7 +54,7 @@ std::string console::In(string text, int color) {
 	std::string input;
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
 	std::cout << text;
-	std::cin >> input;
+	std::getline(std::cin,input);
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 10); // white
 	return input;
 }
