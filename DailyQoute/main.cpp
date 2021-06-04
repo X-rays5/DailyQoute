@@ -24,7 +24,7 @@ void MainProgram() {
 			std::string qoute = json["content"].GetString();
 			std::string author = json["author"].GetString();
 			Console->Send("Random qoute:");
-			Console->Send(fmt::format("{0} Author: {1}", qoute, author));
+			Console->Send(fmt::format("{0} \nBAuthor: {1}", qoute, author));
 			Console->Send("\nInput something random and press enter to get a new qoute", 10);
 			Console->In();
 			MainProgram();
