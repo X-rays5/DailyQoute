@@ -5,6 +5,7 @@
 #include <vector>
 #include <mutex>
 #include <filesystem>
+#include <string>
 
 namespace DailyQoute {
 	using std::string;
