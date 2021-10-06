@@ -8,22 +8,22 @@
 #include <string>
 
 namespace DailyQoute {
-	using std::string;
-	class console {
-	public:
-		void Init();
+using std::string;
+class console {
+public:
+    void Init();
 
-		// Send message
-		void Send(string text);
-		void Send(string text, int color);
-		void SendDebug(string text);
-		void SendDebug(string text, int color);
+    // Send message
+    void Send(string text);
+    void Send(string text, int color);
+    void SendDebug(string text);
+    void SendDebug(string text, int color);
 
-		// Input
-		std::string In();
-		std::string In(string text);
-		std::string In(string text, int color);
-	};
+    // Input
+    std::string In();
+    std::string In(string text);
+    std::string In(string text, int color);
+};
 
-	inline std::unique_ptr<console> Console;
+inline std::unique_ptr<console> Console;
 }
