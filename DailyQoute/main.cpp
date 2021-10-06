@@ -6,12 +6,8 @@
 #include <fmt/format.h>
 using namespace DailyQoute;
 
-DWORD procid = 0;
-
-const char *wchartochar(WCHAR *w) { return (const char *)w; }
-
 void MainProgram() {
-  cpr::Response r = cpr::Get(cpr::Url{"http://api.quotable.io/random"});
+  cpr::Response r = cpr::Get(cpr::Url{"https://quotable.x-rays5.workers.dev/random"});
   rapidjson::Document json;
   if (json.Parse(r.text.c_str()).HasParseError()) {
     Console->Send("Error parsing qoute", 4);
